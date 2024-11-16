@@ -91,7 +91,7 @@
     <div class="background">
         <div class="container">
             <h2>Create Account</h2>
-            <form id="registrationForm">
+            <form id="registrationForm" method="post" action="register">
                 <div class="form-group">
                     <label for="firstname">First Name:</label>
                     <input type="text" id="firstname" name="firstname" required placeholder="Enter your first name">
