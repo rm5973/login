@@ -28,7 +28,7 @@ String password=req.getParameter("password");
 
  boolean b=register(fname,lname,phone,usernameEmail,password);
  boolean l=login(usernameEmail, password);
- 
+
 
 
 }
