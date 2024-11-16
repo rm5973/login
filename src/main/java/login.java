@@ -25,8 +25,7 @@ public class login extends HttpServlet {
         String pass = req.getParameter("password");
         try {
             if (search(user,pass)) {
-               HttpSession s= req.getSession();
-               s.setAttribute("user", "exter");
+               
                
                 RequestDispatcher rd = req.getRequestDispatcher("/seatbooking.jsp");
                 rd.forward(req, res);
@@ -36,7 +35,7 @@ public class login extends HttpServlet {
                 res.setContentType("text/html");
                 PrintWriter out = res.getWriter();
                 out.print("<h3 style=' color:red' >password and username not found</h3>");
-                RequestDispatcher rd = req.getRequestDispatcher("/index.html");
+                RequestDispatcher rd = req.getRequestDispatcher("/login.jsp");
                 rd.include(req, res);
             }
         } catch (ServletException e) {

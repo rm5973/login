@@ -58,7 +58,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="login" me>
+        <form action="login" method="post">
             <div class="mb-3">
                 <input type="text" class="form-control" placeholder="username" name="search" required>
             </div>
@@ -67,7 +67,7 @@
             </div>
             <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>
-        <p class="mt-3">Don't have an account? <a href="#" style="color: #0072ff;">Sign up</a></p>
+        <p class="mt-3">Don't have an account? <a href="#a" style="color: #0072ff;">Sign up</a></p>
     </div>
 </body>
 </html>
