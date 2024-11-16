@@ -102,7 +102,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    <input type="text" id="phone" name="phone" required placeholder="Enter your phone number">
                 </div>
                 <div class="form-group">
                     <label for="usernameEmail">Username or Email:</label>

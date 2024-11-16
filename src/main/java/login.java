@@ -57,8 +57,8 @@ public class login extends HttpServlet {
 
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/register", "root", "root");
-        PreparedStatement pd=con.prepareStatement("Select * from login ");
-        ResultSet rs=pd.executeQuery("select * from login");
+        PreparedStatement pd=con.prepareStatement("Select * from registration ");
+        ResultSet rs=pd.executeQuery("select * from registration");
 
         while(rs.next()){
 
