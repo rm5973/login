@@ -26,8 +26,9 @@ String password=req.getParameter("password");
 
 
 
-register(fname,lname,phone,usernameEmail,password);
-
+ boolean b=register(fname,lname,phone,usernameEmail,password);
+ boolean l=login(usernameEmail, password);
+ 
 
 
 }
@@ -41,5 +42,17 @@ protected boolean register(String fname,String lname,String phone,String usernam
     
 
 }
+
+  protected boolean login(String usernameEmail,String password) throws ClassNotFoundException, SQLException{
+    
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/register", "root", "root");
+    PreparedStatement p=con.prepareStatement("insert into registration ("+usernameEmail+","+password+")");
+    return p.execute();
+    
+
+  }
+
+
 
 }
