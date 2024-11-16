@@ -67,7 +67,7 @@
             </div>
             <button type="submit" class="btn btn-primary w-100">Login</button>
         </form>
-        <p class="mt-3">Don't have an account? <a href="#a" style="color: #0072ff;">Sign up</a></p>
+        <p class="mt-3">Don't have an account? <a href="./registration.jsp" style="color: #0072ff;">Sign up</a></p>
     </div>
 </body>
 </html>
