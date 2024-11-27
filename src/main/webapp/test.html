@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selector</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .book-button {
+            background-color: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 100%;
+        }
+        .book-button:hover {
+            background-color: #e43b3b;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-danger text-white p-3 d-flex justify-content-between align-items-center">
+        <h1 class="m-0">Movie Selector</h1>
+        <nav class="d-flex align-items-center">
+            <a href="#" class="text-white ml-3">Movies</a>
+            <a href="#" class="text-white ml-3">Events</a>
+            <a href="#" class="text-white ml-3">Plays</a>
+            <div class="ml-3">
+                <button class="btn btn-light text-danger font-weight-bold mr-2" onclick="login()">Login</button>
+                <button class="btn btn-light text-danger font-weight-bold" onclick="signup()">Signup</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Movie Card 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="movie1.jpg" class="card-img-top" alt="Movie One Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie One</h5>
+                        <p class="card-text">A thrilling adventure movie.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="book-button" onclick="bookTickets('Movie One')">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="movie2.jpg" class="card-img-top" alt="Movie Two Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Two</h5>
+                        <p class="card-text">An exciting action-packed film.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="book-button" onclick="bookTickets('Movie Two')">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="movie3.jpg" class="card-img-top" alt="Movie Three Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Three</h5>
+                        <p class="card-text">A heartwarming romantic story.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="book-button" onclick="bookTickets('Movie Three')">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Movie Card 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="movie4.jpg" class="card-img-top" alt="Movie Four Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Four</h5>
+                        <p class="card-text">A suspenseful mystery drama.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="book-button" onclick="bookTickets('Movie Four')">Book Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function bookTickets(movieName) {
+            alert('Booking tickets for ' + movieName);
+        }
+
+        function login() {
+            alert('Redirect to Login Page');
+        }
+
+        function signup() {
+            alert('Redirect to Signup Page');
+        }
+    </script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

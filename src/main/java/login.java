@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mysql.cj.protocol.Resultset;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -27,8 +30,13 @@ public class login extends HttpServlet {
             if (search(user,pass)) {
                
                
-                RequestDispatcher rd = req.getRequestDispatcher("/seatbooking.jsp");
-                rd.forward(req, res);
+                
+                HttpSession hs= req.getSession();
+               
+                hs.setAttribute("username", user);
+                res.sendRedirect("movieslist");
+
+                
             }
 
             else {
@@ -61,7 +69,7 @@ public class login extends HttpServlet {
         ResultSet rs=pd.executeQuery("select * from registration");
 
         while(rs.next()){
-
+            
             System.out.println(rs.getString("username"));
            
             if(name.equals (rs.getString("username")) && pass.equals(rs.getString("password")))return true;
@@ -70,5 +78,6 @@ public class login extends HttpServlet {
         }
         return false;
     }
+
 
 }

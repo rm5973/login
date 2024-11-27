@@ -1,3 +1,7 @@
 logout.class
+movielist.class
+jdbcconnection.class
+book.class
+booknow.class
 registration.class
 login.class
